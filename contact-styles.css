@@ -805,32 +805,48 @@ body {
 
 @media (max-width: 480px) {
 
-    /* Hide contact button on mobile - matches landing page */
-    .contact-btn {
-        display: none;
-    }
-
+    /* Header: menu left | logo centered */
     .header {
-        padding: 0 14px;
-        height: 40px;
-        justify-content: flex-end;
+        padding: 0 16px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
         margin-bottom: 40px;
     }
 
     .menu-wrapper {
-        left: 30px;
-        top: 0;
+        position: static;
+        left: auto;
+        top: auto;
+        flex-shrink: 0;
     }
 
     .menu-icon {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
 
     .logo {
-        width: 130px;
-        height: 40px;
-        margin-left: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: auto;
+        margin: 0;
+    }
+
+    .header::after {
+        content: '';
+        display: block;
+        width: 36px;
+        flex-shrink: 0;
+    }
+
+    .contact-btn {
+        display: none;
     }
 
     .page-title {
@@ -863,24 +879,30 @@ body {
 
 @media (max-width: 390px) {
     .header {
-        padding: 0 14px;
-        height: 40px;
+        padding: 0 16px;
+        height: 56px;
         align-items: center;
+        position: relative;
     }
 
     .menu-wrapper {
-        left: 43px;
-        top: 0;
+        position: static;
+        left: auto;
+        top: auto;
     }
 
     .menu-icon {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
 
     .logo {
-        width: 130px;
-        height: 40px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: auto;
     }
 
     .contact-btn {

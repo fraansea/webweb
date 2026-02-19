@@ -1595,37 +1595,54 @@ body {
    ============================================================ */
 @media (max-width: 480px) {
 
-    /* Header */
+    /* Header: menu left | logo centered | nothing right */
     .header {
-        padding: 0 14px;
-        height: 40px;
-        justify-content: flex-end;
+        padding: 0 16px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
         margin-bottom: 180px;
     }
 
     .menu-wrapper {
-        left: 30px;
-        top: 0;
+        position: static;
+        left: auto;
+        top: auto;
+        flex-shrink: 0;
     }
 
     .menu-icon {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
 
     .logo {
-        width: 130px;
-        height: 40px;
-        margin-left: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: auto;
+        margin: 0;
     }
 
-    /* Hide contact button on mobile - Figma 390w has no contact button in header */
+    /* Spacer to balance left menu icon (keeps logo visually centered) */
+    .header::after {
+        content: '';
+        display: block;
+        width: 36px;
+        flex-shrink: 0;
+    }
+
+    /* Hide contact button on mobile */
     .contact-btn {
         display: none;
     }
 
     .dropdown-menu {
-        top: 52px;
+        top: 56px;
         min-width: 180px;
     }
 
