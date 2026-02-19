@@ -699,6 +699,127 @@ body {
     line-height: 1.5;
 }
 
+/* Visibility Toggle Table */
+.visibility-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-top: 10px;
+}
+
+.visibility-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.visibility-table thead {
+    background: var(--bg-light);
+}
+
+.visibility-table th,
+.visibility-table td {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.visibility-table th.element-col,
+.visibility-table td.element-name {
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    position: sticky;
+    left: 0;
+    background: var(--bg-white);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.visibility-table thead th.element-col {
+    background: var(--bg-light);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--secondary);
+}
+
+.visibility-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.visibility-table tbody tr:hover {
+    background: #f8f8f6;
+}
+
+.visibility-table tbody tr:hover td.element-name {
+    background: #f8f8f6;
+}
+
+.breakpoint-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-switch input:checked+.toggle-slider {
+    background: var(--success);
+}
+
+.toggle-switch input:checked+.toggle-slider::before {
+    transform: translateX(20px);
+}
+
+.toggle-switch:hover .toggle-slider {
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .sidebar {

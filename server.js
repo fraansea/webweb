@@ -205,6 +205,19 @@ const getDefaultData = () => ({
     siteSettings: {
         clinicName: 'Punarjani',
         footerTagline: 'Wellness & Healthcare'
+    },
+    headerVisibility: {
+        menuIcon: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true },
+        logo: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true },
+        contactBtn: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true }
+    },
+    footerVisibility: {
+        logo: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true },
+        contactCol: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true },
+        navCol1: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true },
+        navCol2: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true },
+        largeText: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true },
+        scrollTop: { '1600': true, '1400': true, '1200': true, '1024': true, '768': true, '480': true }
     }
 });
 
@@ -446,6 +459,22 @@ app.put('/api/site-settings', authenticateToken, (req, res) => {
     data.siteSettings = { ...data.siteSettings, ...req.body };
     saveData(data);
     res.json({ message: 'Site settings updated successfully', siteSettings: data.siteSettings });
+});
+
+// Header Visibility
+app.put('/api/header-visibility', authenticateToken, (req, res) => {
+    const data = loadData();
+    data.headerVisibility = req.body;
+    saveData(data);
+    res.json({ message: 'Header visibility updated successfully', headerVisibility: data.headerVisibility });
+});
+
+// Footer Visibility
+app.put('/api/footer-visibility', authenticateToken, (req, res) => {
+    const data = loadData();
+    data.footerVisibility = req.body;
+    saveData(data);
+    res.json({ message: 'Footer visibility updated successfully', footerVisibility: data.footerVisibility });
 });
 
 // File Upload

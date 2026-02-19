@@ -79,6 +79,8 @@ const loadContent = async () => {
         loadServicesPage(data.servicesPage || {});
         loadContactPage(data.contactPage || {});
         loadSiteSettings(data.siteSettings || {});
+        loadHeaderVisibility(data.headerVisibility || {});
+        loadFooterVisibility(data.footerVisibility || {});
     } catch (error) {
         console.error('Error loading content:', error);
         showToast('Error loading content', 'error');
@@ -950,6 +952,90 @@ document.getElementById('siteSettingsForm').addEventListener('submit', async (e)
         }
     } catch (error) {
         showToast('Error updating site settings', 'error');
+    }
+});
+
+// ============================================================
+// Header Visibility Section
+// ============================================================
+const BREAKPOINTS = ['1600', '1400', '1200', '1024', '768', '480'];
+
+const loadHeaderVisibility = (hv) => {
+    const table = document.getElementById('headerVisibilityTable');
+    if (!table) return;
+    const checkboxes = table.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+        const el = cb.dataset.element;
+        const bp = cb.dataset.breakpoint;
+        cb.checked = hv[el] ? hv[el][bp] !== false : true;
+    });
+};
+
+document.getElementById('saveHeaderVisibility').addEventListener('click', async () => {
+    const table = document.getElementById('headerVisibilityTable');
+    const result = {};
+    const checkboxes = table.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+        const el = cb.dataset.element;
+        const bp = cb.dataset.breakpoint;
+        if (!result[el]) result[el] = {};
+        result[el][bp] = cb.checked;
+    });
+
+    try {
+        const response = await fetch(`${API_URL}/header-visibility`, {
+            method: 'PUT',
+            headers: getHeaders(),
+            body: JSON.stringify(result)
+        });
+        if (response.ok) {
+            showToast('Header visibility updated successfully!');
+        } else {
+            throw new Error('Failed to update');
+        }
+    } catch (error) {
+        showToast('Error updating header visibility', 'error');
+    }
+});
+
+// ============================================================
+// Footer Visibility Section
+// ============================================================
+const loadFooterVisibility = (fv) => {
+    const table = document.getElementById('footerVisibilityTable');
+    if (!table) return;
+    const checkboxes = table.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+        const el = cb.dataset.element;
+        const bp = cb.dataset.breakpoint;
+        cb.checked = fv[el] ? fv[el][bp] !== false : true;
+    });
+};
+
+document.getElementById('saveFooterVisibility').addEventListener('click', async () => {
+    const table = document.getElementById('footerVisibilityTable');
+    const result = {};
+    const checkboxes = table.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+        const el = cb.dataset.element;
+        const bp = cb.dataset.breakpoint;
+        if (!result[el]) result[el] = {};
+        result[el][bp] = cb.checked;
+    });
+
+    try {
+        const response = await fetch(`${API_URL}/footer-visibility`, {
+            method: 'PUT',
+            headers: getHeaders(),
+            body: JSON.stringify(result)
+        });
+        if (response.ok) {
+            showToast('Footer visibility updated successfully!');
+        } else {
+            throw new Error('Failed to update');
+        }
+    } catch (error) {
+        showToast('Error updating footer visibility', 'error');
     }
 });
 

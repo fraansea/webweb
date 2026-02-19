@@ -46,6 +46,12 @@
             <a href="#contact" class="nav-item" data-section="contact">
                 <span>📞</span> Contact Info
             </a>
+            <a href="#header-visibility" class="nav-item" data-section="header-visibility">
+                <span>📌</span> Header
+            </a>
+            <a href="#footer-visibility" class="nav-item" data-section="footer-visibility">
+                <span>🦶</span> Footer
+            </a>
             <div class="nav-divider"></div>
             <div class="nav-group-label">Page Content</div>
             <a href="#services-page" class="nav-item" data-section="services-page">
@@ -254,6 +260,201 @@
                         <button type="submit" class="btn-primary">Save Changes</button>
                     </div>
                 </form>
+            </section>
+
+            <!-- Header Visibility Section -->
+            <section id="header-visibility" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Header Visibility</h2>
+                    <p class="section-description">Control which header elements are shown at each responsive breakpoint
+                    </p>
+                </div>
+
+                <div class="visibility-table-wrapper">
+                    <table class="visibility-table" id="headerVisibilityTable">
+                        <thead>
+                            <tr>
+                                <th class="element-col">Element</th>
+                                <th><span class="breakpoint-badge">≤1600px</span></th>
+                                <th><span class="breakpoint-badge">≤1400px</span></th>
+                                <th><span class="breakpoint-badge">≤1200px</span></th>
+                                <th><span class="breakpoint-badge">≤1024px</span></th>
+                                <th><span class="breakpoint-badge">≤768px</span></th>
+                                <th><span class="breakpoint-badge">≤480px</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="element-name">🍔 Menu Icon</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="menuIcon"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="menuIcon"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="menuIcon"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="menuIcon"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="menuIcon"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="menuIcon"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="element-name">🖼️ Logo</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="element-name">📩 Contact Button</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactBtn"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactBtn"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactBtn"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactBtn"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactBtn"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactBtn"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-primary" id="saveHeaderVisibility">Save Changes</button>
+                </div>
+            </section>
+
+            <!-- Footer Visibility Section -->
+            <section id="footer-visibility" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Footer Visibility</h2>
+                    <p class="section-description">Control which footer elements are shown at each responsive breakpoint
+                    </p>
+                </div>
+
+                <div class="visibility-table-wrapper">
+                    <table class="visibility-table" id="footerVisibilityTable">
+                        <thead>
+                            <tr>
+                                <th class="element-col">Element</th>
+                                <th><span class="breakpoint-badge">≤1600px</span></th>
+                                <th><span class="breakpoint-badge">≤1400px</span></th>
+                                <th><span class="breakpoint-badge">≤1200px</span></th>
+                                <th><span class="breakpoint-badge">≤1024px</span></th>
+                                <th><span class="breakpoint-badge">≤768px</span></th>
+                                <th><span class="breakpoint-badge">≤480px</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="element-name">🖼️ Logo</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="logo"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="element-name">📞 Contact Column</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactCol"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactCol"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactCol"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactCol"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactCol"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="contactCol"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="element-name">🔗 Nav Column 1</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol1"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol1"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol1"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol1"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol1"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol1"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="element-name">🔗 Nav Column 2</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol2"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol2"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol2"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol2"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol2"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="navCol2"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="element-name">📝 Large Text</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="largeText"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="largeText"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="largeText"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="largeText"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="largeText"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="largeText"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="element-name">⬆️ Scroll to Top</td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="scrollTop"
+                                            data-breakpoint="1600"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="scrollTop"
+                                            data-breakpoint="1400"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="scrollTop"
+                                            data-breakpoint="1200"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="scrollTop"
+                                            data-breakpoint="1024"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="scrollTop"
+                                            data-breakpoint="768"><span class="toggle-slider"></span></label></td>
+                                <td><label class="toggle-switch"><input type="checkbox" data-element="scrollTop"
+                                            data-breakpoint="480"><span class="toggle-slider"></span></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-primary" id="saveFooterVisibility">Save Changes</button>
+                </div>
             </section>
 
             <!-- Services Page Section -->

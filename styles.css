@@ -2144,3 +2144,10 @@ body {
         height: 48px;
     }
 }
+
+/* Hide footer logo below 400px */
+@media (max-width: 400px) {
+    .footer-logo {
+        display: none;
+    }
+}
